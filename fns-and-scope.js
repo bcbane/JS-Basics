@@ -6,6 +6,22 @@ var name = 'Tyler';
 
   //Code Here
 
+  function isTyler(name) {
+
+    if (name === "Tyler") {
+
+      return true;
+
+    }
+    else {
+      return false;
+    }
+
+  }
+
+  console.log(isTyler("Bill"));
+  console.log(isTyler("Tyler"));
+
 //////////////////PROBLEM 2////////////////////
 
 
@@ -13,6 +29,14 @@ var name = 'Tyler';
 
 
   //Code Here
+
+  function getName() {
+
+  var fullNameVal =  prompt("Please enter your name.","example: John Smith");
+
+  return fullNameVal;
+
+  }
 
 
 //////////////////PROBLEM 3////////////////////
@@ -24,6 +48,15 @@ var name = 'Tyler';
 
   //Code Here
 
+  function welcome() {
+
+    var name = getName();
+
+    alert("Welcome, " + name);
+
+
+  }
+
 
 //////////////////PROBLEM 4////////////////////
 
@@ -32,7 +65,9 @@ var name = 'Tyler';
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+  //parameters are the placeholders and arguments are the values that the parameters represent
+
+
 
 
 //////////////////PROBLEM 5////////////////////
@@ -42,8 +77,7 @@ var name = 'Tyler';
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //Answer Here
-
+  //(0,‘’,Undefined,Null,false,NaN)  you make an if statement and if the thing you are testing is any of those values it's falsey
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,16 +87,23 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+
+  function myName() {
+
+    return "Bob Cook";
+
+  }
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
+  var newMyName = myName;
+
 //Now alert the result of invoking newMyName
 
-
+  alert(newMyName);
 
 //////////////////PROBLEM 7////////////////////
 
@@ -72,8 +113,21 @@ var name = 'Tyler';
 
   //Code Here
 
+  function outerFn(){
+
+    return function() {
+
+      return "Bob Cook";
+    }
+
+  }
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
+  var innerFn = outerFn();
+
 //Now invoke innerFn.
+
+  innerFn();
